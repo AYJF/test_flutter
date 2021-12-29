@@ -1,7 +1,7 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:test_flutter/views/sign_in.dart';
+import 'package:vrouter/vrouter.dart';
 import 'package:test_flutter/views/sign_up_provider.dart';
 
 class SignUp extends StatelessWidget {
@@ -16,11 +16,7 @@ class SignUp extends StatelessWidget {
             actions: [
               IconButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SignInView()),
-                    );
+                    context.vRouter.to('/login');
                   },
                   icon: const Icon(Icons.person))
             ],

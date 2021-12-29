@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:test_flutter/services/app_provider.dart';
 
 import '../services/auth_service.dart';
 
@@ -49,6 +50,7 @@ class HomeView extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 context.read<FirebaseAuthService>().signOut();
+                context.read<AppHndl>().logout(context);
               },
               child: const Text("signOut"),
             ),

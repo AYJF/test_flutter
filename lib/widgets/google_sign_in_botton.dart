@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'package:provider/provider.dart';
 import 'package:social_auth_buttons/social_auth_buttons.dart';
+import 'package:test_flutter/services/app_provider.dart';
+
 import '../services/auth_service.dart';
 
 class GoogleSignInButton extends StatelessWidget {
@@ -19,6 +20,7 @@ class GoogleSignInButton extends StatelessWidget {
             height: 100,
             onPressed: () {
               context.read<FirebaseAuthService>().signInWithGoogle();
+              context.read<AppHndl>().login(context);
             },
             darkMode: false,
             style: AuthButtonStyle.icon,

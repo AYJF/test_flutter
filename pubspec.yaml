@@ -40,6 +40,7 @@ dependencies:
   google_sign_in: ^5.2.1
   social_auth_buttons: ^2.0.0-nullsafety.1
   email_validator: ^2.0.1
+  vrouter: ^1.2.0+15
 
 dev_dependencies:
   flutter_test:

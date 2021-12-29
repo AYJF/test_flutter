@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
-
 import '../services/auth_service.dart';
 
 class SignInViewModel extends ChangeNotifier {

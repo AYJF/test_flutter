@@ -39,6 +39,7 @@ class FirebaseAuthService {
     String? password,
   }) async {
     assert(email != null && password != null);
+
     final userCredential = await _firebaseAuth.signInWithEmailAndPassword(
       email: email!,
       password: password!,

@@ -1,9 +1,10 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:test_flutter/services/app_provider.dart';
 import 'package:test_flutter/views/sign_in_provider.dart';
-import 'package:test_flutter/views/sign_up.dart';
 import 'package:test_flutter/widgets/google_sign_in_botton.dart';
+import 'package:vrouter/vrouter.dart';
 
 class SignInView extends StatelessWidget {
   const SignInView({Key? key}) : super(key: key);
@@ -18,10 +19,7 @@ class SignInView extends StatelessWidget {
             actions: [
               IconButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const SignUp()),
-                    );
+                    context.vRouter.to('/register');
                   },
                   icon: const Icon(Icons.person_add))
             ],
@@ -92,6 +90,7 @@ class _EmailPasswordFormState extends State<_EmailPasswordForm> {
 
   @override
   Widget build(BuildContext context) {
+    final AppHndl appHndl = Provider.of<AppHndl>(context, listen: false);
     return SizedBox(
       width: 500,
       height: 350,
@@ -143,6 +142,10 @@ class _EmailPasswordFormState extends State<_EmailPasswordForm> {
                             .signInWithEmailAndPassword(
                                 _emailController.value.text,
                                 _passwordController.value.text);
+
+                        appHndl.login(context);
+
+                        // context.read<AppHndl>().login(context);
                       }
                     },
                     child: const Text('Submit'),
