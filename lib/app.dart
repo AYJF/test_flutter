@@ -14,9 +14,10 @@ class MyApp extends StatelessWidget {
 
     return VRouter(
       debugShowCheckedModeBanner: false,
+      initialUrl: '/login',
+      mode: VRouterMode.history,
       routes: [
         VWidget(path: '/login', widget: const SignInView()),
-        VWidget(path: '/', widget: const SignInView()),
         VWidget(path: '/register', widget: const SignUp()),
         VGuard(
           beforeEnter: (vRedirector) async =>
