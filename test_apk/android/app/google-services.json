@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "749209950223",
+    "project_id": "test-apk-d12cf",
+    "storage_bucket": "test-apk-d12cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749209950223:android:fda329d3534220e3d52b7a",
+        "android_client_info": {
+          "package_name": "com.example.test_apk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749209950223-livi42h8q066dch0c8bavnq7t2s97vgg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABYQr9r5eStHsLkR0A8GnLABBTSNxCNJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749209950223-livi42h8q066dch0c8bavnq7t2s97vgg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "749209950223-kjp8kepba3motinltqegt2s4t1210i2s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.testApk"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
